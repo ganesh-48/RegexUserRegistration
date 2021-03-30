@@ -11,13 +11,22 @@ public class UserRegistration {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter your first name");
 		String firstName = sc.next();
-		Pattern pattern = Pattern.compile("[A-Z]{1}[a-z]{2}");
+		Pattern pattern = Pattern.compile("[A-Z]{1}[a-z]{2}+");
 		Matcher matcher = pattern.matcher(firstName);
 		boolean matches = matcher.find();
 		if (matches) {
 			System.out.println("your name is valid");
 		} else {
 			System.out.println("please enter a valid name");
+		}
+		System.out.println("enter your last name");
+		String lastName = sc.next();
+		matcher = pattern.matcher(lastName);
+		matches = matcher.find();
+		if (matches) {
+			System.out.println("your last name is valid");
+		}else {
+			System.out.println("please enter a valid last name");
 		}
 	}
 }
