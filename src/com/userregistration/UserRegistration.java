@@ -42,17 +42,7 @@ public class UserRegistration {
 			System.out.println("please enter a valid email");
 		}
 	
-		System.out.println("enter your mobile number");
-		String number =sc.next();
-		pattern = Pattern.compile("^((\\\\+)?(\\\\d{2}[-]))?(\\\\d{10}){1}?$",Pattern.CASE_INSENSITIVE);
-		matcher = pattern.matcher(number);
-		matches = matcher.find();
-		if (matches) {
-			System.out.println("your mobile number is valid");
-		}else {
-			System.out.println("please enter a valid mobile number");
-		}
-	
+		
 		System.out.println("enter your password");
 		String password = sc.next();
 		pattern = Pattern.compile("^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$",Pattern.CASE_INSENSITIVE);
